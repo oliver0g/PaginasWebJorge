@@ -1,0 +1,100 @@
+<!DOCTYPE html> <!-- Define que el documento es HTML5 -->
+<html lang="es"> <!-- Indica que el idioma principal del contenido es español -->
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres en UTF-8 (soporta ñ, acentos, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el sitio sea responsive en móviles -->
+  <title>MeditApp - Tu espacio de calma</title> <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="estiloPaginaProducto.css"> <!-- Conexión con el archivo CSS externo -->
+</head>
+<body>
+  <!-- Encabezado principal con el título y la barra de navegación -->
+  <header>
+    <h1>MeditApp</h1> <!-- Nombre de la aplicación -->
+    <nav>
+      <ul>
+        <!-- Enlaces de navegación interna hacia secciones del sitio -->
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li><a href="#features">Características</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Sección principal de bienvenida o héroe -->
+    <section id="hero">
+      <article>
+        <h2>Encuentra tu calma en cualquier momento</h2>
+        <p>Descubre sesiones de meditación guiadas para reducir el estrés y mejorar tu bienestar.</p>
+        <button id="subscribeBtn">Suscríbete</button> <!-- Botón de suscripción -->
+      </article>
+    </section>
+
+    <!-- Sección sobre la empresa/aplicación -->
+    <section id="about">
+      <article>
+        <h2>Sobre Nosotros</h2>
+        <p>MeditApp es una aplicación diseñada para guiarte en tu camino hacia la paz interior.</p>
+      </article>
+    </section>
+
+    <!-- Sección con las características del servicio -->
+    <section id="features">
+      <article>
+        <h2>Características</h2>
+        <ul>
+          <li>Meditaciones guiadas diarias</li>
+          <li>Ejercicios de respiración</li>
+          <li>Seguimiento de tu progreso</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Sección de contacto con un formulario -->
+    <section id="contact">
+      <article>
+        <h2>Contáctanos</h2>
+        <form id="contactForm"> <!-- Formulario de contacto -->
+          <!-- Campo para el nombre -->
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+          <span class="error" id="nameError"></span> <!-- Mensaje de error -->
+
+          <!-- Campo para el correo -->
+          <label for="email">Correo:</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error" id="emailError"></span>
+
+          <!-- Campo para el mensaje -->
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" required></textarea>
+          <span class="error" id="messageError"></span>
+
+          <!-- Botón para enviar el formulario -->
+          <button type="submit">Enviar</button>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 MeditApp. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Modal (ventana emergente que aparece al enviar el formulario o suscribirse) -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p>¡Gracias por tu mensaje! 💜</p>
+      <button id="closeModal">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Contenedor para animación de confeti -->
+  <div id="confetti-container"></div>
+
+  <!-- Archivo JavaScript externo que maneja las interacciones -->
+  <script src="appPagProducto.js"></script>
+</body>
+</html>

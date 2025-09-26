@@ -1,0 +1,167 @@
+/* Estilos generales y de fuente */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de puntuaciones */
+.score-container {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+}
+
+/* Estilos del juego y canvas */
+.game-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 800px;
+    height: 250px;
+    border: 4px solid #333;
+    border-radius: 8px;
+    overflow: hidden; /* Oculta cualquier cosa que se salga del borde */
+}
+
+canvas {
+    background-color: #fff;
+    display: block;
+}
+
+.game-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#game-over-message h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #ff4136;
+}
+
+#game-over-message p {
+    margin: 10px 0;
+}
+
+/* Formulario para guardar puntuación */
+.form-container {
+    margin: 15px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    margin-right: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#restartBtn {
+    background-color: #008CBA;
+}
+
+#restartBtn:hover {
+    background-color: #007ba7;
+}
+
+
+/* Tabla de puntuaciones */
+.leaderboard-container {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Responsividad */
+@media (max-width: 920px) {
+    .game-wrapper, canvas {
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        padding: 10px;
+    }
+    .score-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}

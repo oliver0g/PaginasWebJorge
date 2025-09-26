@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!-- Indica que el documento usa HTML5 -->
+<html lang="es"> <!-- Define el idioma principal como español -->
+<head>
+  <meta charset="UTF-8"> <!-- Codificación UTF-8 para soportar caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajuste responsive en móviles -->
+  <title>Clima Actual</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="estiloClima.css"> <!-- Archivo CSS externo con los estilos -->
+  <!-- Font Awesome para usar iconos (por ejemplo, de clima) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Contenedor principal de la aplicación -->
+  <div id="app">
+    <!-- Indicador de carga mientras se obtiene la información del clima -->
+    <div id="loader" class="loader">Cargando...</div>
+
+    <!-- Tarjeta que muestra la información del clima, inicialmente oculta -->
+    <div id="weather-card" class="weather-card hidden">
+      <h2 id="city">Ciudad</h2> <!-- Nombre de la ciudad -->
+      <div class="weather-info">
+        <!-- Icono del clima -->
+        <div id="icon" class="icon">☀️</div>
+        <!-- Detalles del clima -->
+        <div class="details">
+          <p>Temperatura: <span id="temp"></span>°C</p> <!-- Temperatura actual -->
+          <p>Sensación: <span id="feels"></span>°C</p> <!-- Sensación térmica -->
+          <p>Humedad: <span id="humidity"></span>%</p> <!-- Humedad relativa -->
+          <p>Viento: <span id="wind"></span> m/s</p> <!-- Velocidad del viento -->
+          <p>Condición: <span id="description"></span></p> <!-- Descripción del clima -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensaje de error, inicialmente oculto -->
+    <div id="error" class="error hidden"></div>
+
+    <!-- Búsqueda de ciudad, inicialmente oculta -->
+    <div id="city-search" class="city-search hidden">
+      <input type="text" id="city-input" placeholder="Buscar ciudad"> <!-- Campo para escribir el nombre de la ciudad -->
+      <button id="search-btn">Buscar</button> <!-- Botón para iniciar la búsqueda -->
+    </div>
+  </div>
+
+  <!-- Archivo JavaScript que controla la lógica de la aplicación (geolocalización, API, actualizaciones) -->
+  <script src="scriptClima.js"></script>
+</body>
+</html>

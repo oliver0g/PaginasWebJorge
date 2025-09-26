@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunnerJS Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RunnerJS</h1>
+            <div class="score-container">
+                <div>Score: <span id="current-score">0</span></div>
+                <div>Level: <span id="current-level">1</span></div>
+                <div>High Score: <span id="high-score">0</span></div>
+            </div>
+        </header>
+        
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="800" height="250"></canvas>
+            <div id="start-message" class="game-message">
+                <p>Presiona 'Espacio' o haz clic para empezar</p>
+            </div>
+            <div id="game-over-message" class="game-message" style="display: none;">
+                <h2>Game Over</h2>
+                <p>Tu puntuación: <span id="final-score">0</span></p>
+                <div class="form-container">
+                    <input type="text" id="playerName" placeholder="Tu Nombre" maxlength="10">
+                    <button id="saveScoreBtn">Guardar</button>
+                </div>
+                <button id="restartBtn">Reiniciar</button>
+            </div>
+        </div>
+
+        <main class="leaderboard-container">
+            <h2>🏆 Leaderboard 🏆</h2>
+            <table id="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Puesto</th>
+                        <th>Nombre</th>
+                        <th>Puntuación</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las puntuaciones se cargarán aquí -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

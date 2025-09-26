@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <!-- Vincular hoja de estilos -->
+    <link rel="stylesheet" href="estiloPagina.css">
+    <!-- Fuente moderna de Google Fonts -->
+</head>
+<body>
+    <!-- Encabezado y navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section>
+            <h2>Bienvenidos a mi Pagina Web</h2>
+            <p>En esta página encontrarás información sobre mi trabajo, mis proyectos y cómo contactarme.</p>
+        </section>
+
+        <section>
+            <h2>Acerca de mí</h2>
+            <p>Soy un desarrollador web apasionado por la tecnología, el diseño.</p>
+        </section>
+
+        <section>
+            <h2>Contacto</h2>
+            <p>Puedes enviarme un mensaje usando el siguiente formulario:</p>
+            
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Derechos reservados © 2025 Mi Página Web </p>
+    </footer>
+</body>
+</html>

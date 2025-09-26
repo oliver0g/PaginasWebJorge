@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!-- Indica que el documento usa HTML5 -->
+<html lang="es"> <!-- Define el idioma de la página como español -->
+<head>
+  <meta charset="UTF-8"> <!-- Codificación UTF-8 para caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajuste responsive en móviles -->
+  <title>Juego de Memoria</title> <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="estiloJuegoMemoria.css"> <!-- Archivo CSS externo para los estilos -->
+</head>
+<body>
+  <!-- Encabezado principal del juego -->
+  <header>
+    <h1>🧠 Juego de Memoria</h1>
+    <!-- Estadísticas del juego -->
+    <div class="stats">
+      <p>Aciertos: <span id="score">0</span> / 6</p> <!-- Contador de pares encontrados -->
+      <p>Tiempo: <span id="time">60</span>s</p> <!-- Temporizador con 60 segundos -->
+    </div>
+    <button id="restartBtn">Reiniciar</button> <!-- Botón para reiniciar el juego -->
+  </header>
+
+  <!-- Área principal del juego -->
+  <main>
+    <!-- Tablero del juego donde se mostrarán las cartas -->
+    <section class="game-board" id="gameBoard">
+      <!-- Las cartas se generan dinámicamente con JavaScript -->
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Juego de Memoria</p>
+  </footer>
+
+  <!-- Modal que aparece al ganar el juego -->
+  <div id="winMessage" class="modal">
+    <div class="modal-content">
+      <h2>🎉 ¡Ganaste!</h2>
+      <p>Aciertos: <span id="finalScore"></span> / 6</p> <!-- Muestra el puntaje final -->
+      <p>Tiempo restante: <span id="finalTime"></span>s</p> <!-- Muestra cuánto tiempo sobró -->
+      <button id="closeModal">Cerrar</button> <!-- Botón para cerrar el modal -->
+    </div>
+  </div>
+
+  <!-- Archivo JavaScript con la lógica del juego -->
+  <script src="appJuegoMemoria.js"></script>
+</body>
+</html>
